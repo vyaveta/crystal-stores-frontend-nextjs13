@@ -4,6 +4,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Urbanist } from 'next/font/google'
 import Navbar from '@/components/navbar'
+import ModalProvider from '@/providers/modal-provider'
+import ToastProvider from '@/providers/toast-provider'
 // import { useMediaQuery } from 'react-responsive'
 
 
@@ -27,6 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={urbanist.className}>
+        <ModalProvider />
+        <ToastProvider />
         <Navbar max_w_600_px={true} />
         {children}
         <Footer />

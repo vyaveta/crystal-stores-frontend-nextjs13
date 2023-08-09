@@ -18,18 +18,21 @@ const Navbar: React.FC<NavbarProps> = async ({
 
     return (
         <nav className="border-b">
-            <Container>
-                <div className="relative px-2 sm:px-4 lg:px-8 flex h-16 items-center" >
+            {/* <Container> */}
+                <div className=" px-2 sm:px-4 lg:px-8 flex h-16 items-center fixed w-[100vw] z-20 bg-white" >
                     <Link href={"/"} className="ml-4 flex lg:ml-0 gap-x-2">
                         <p className="font-bold text-lg md:text-xl">CrystalInizio</p>
                     </Link>
                     {!max_w_600_px && <MainNav data={categories} />}
                      <NavbarActions />
                 </div>
-                <div className="relative lg:px-8 flex flex-row w-full justify-around h-16 border-t border-black items-center">
+
+                <div className="h-16 w-full bg-blue-300"></div>
+                
+            {/* </Container> */}
+            <div className="relative lg:px-8 flex flex-row w-full justify-around h-16 border-t border-black items-center">
                     {max_w_600_px && <MainNav data={categories} />}
                 </div>
-            </Container>
         </nav>
     )
 }

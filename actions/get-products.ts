@@ -10,6 +10,8 @@ interface Query {
 }
 
 const getProducts = async (query: Query): Promise<Product[]> => {
+
+    console.log(query,'is the query')
     
     const url = qs.stringifyUrl({
         url: URL,
@@ -21,7 +23,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
         }
     })
 
-    const res = await fetch(URL)
+    const res = await fetch(url)
     return res.json()
 }
 
