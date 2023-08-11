@@ -23,7 +23,7 @@ const Summary = () => {
         if(searchParams.get("canceled")) {
             toast.error("Payment canceled!")
         }
-    },[])
+    },[searchParams, removeAll])
 
     // function to calculate the total price 
     const totalPrice = items.reduce((total,item) => total + Number(item.price),0)

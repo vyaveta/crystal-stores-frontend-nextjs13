@@ -17,6 +17,8 @@ const CartPage = () => {
         setIsMounted(false)
     }, [])
 
+    // if(!isMounted) return null
+
     return (
         <div className="bg-white" >
             <Container>
